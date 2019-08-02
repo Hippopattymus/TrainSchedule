@@ -58,3 +58,16 @@ $("#submit").on("click", function (event) {
   });
 });
 
+function currentTime() {
+  var current = moment().format('hh:mm');
+  $("#currentTime").html("Current Time: " + current);
+  setTimeout(currentTime, 1000);
+};
+
+currentTime();
+
+//probably could use moment and an if statement to reload as soon as the minute changes
+//but this works decently well
+setInterval(function() {
+  window.location.reload();
+}, 60000);
