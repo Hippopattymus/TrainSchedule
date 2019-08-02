@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>CoderBay</title>
+
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- Bootstrap CDN-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+  <!-- Firebase References -->
+  <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+
+  <script src = "https://momentjs.com/downloads/moment.js"></script>
+</head>
+
+<body>
+
+  <div class="container">
+    <br>
+    <div class="jumbotron">
+      <h1 class="text-center">Train Schedule</h1>
+      <hr>
+      <h3 class="text-center">An uncomprehensive directory</h3>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="card card-default">
+          <div class="card-header">
+            <h3 class="text-center pt-1"><strong>Current Train Schedule</strong></h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="card card-default">
+          <div class="card-body">
+
+                  <table class="table">
+                      <thead>
+                        <tr>
+                          <th>Train Name</th>
+                          <th>Destination</th>
+                          <th>Frequency (mins)</th>
+                          <th>Next Arrival</th>
+                          <th>Minutes Away</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                      
+                      </tbody>
+                     </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+   
+    <div class="row">
+      <div class="col-lg-12 mt-4">
+        <div class="card card-default">
+          <div class="card-header">
+            <strong>Add Train</strong>
+          </div>
+          <div class="card-body">
+            <form>
+              <div class="form-group row">
+                <label for="employee-name">Train Name</label>
+                <input class="form-control" id="employee-name" type="text">
+              </div>
+              <div class="form-group row">
+                <label for="role">Destination</label>
+                <input class="form-control" id="role" type="text">
+              </div>
+              <div class="form-group row">
+                  <label for="start">Start Time (HH:mm -- Military Time)</label>
+                  <input class="form-control" id="start" type="text">
+              </div>
+              <div class="form-group row">
+                  <label for="rate">Frequency</label>
+                  <input class="form-control" id="rate" type="number">
+              </div>
+              <button class="btn btn-primary" id="submit" type="submit">Submit</button>
+              <button class="btn btn-primary" id="reset" type="submit">Reset</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Script -->
+  <script src="logic.js"></script>
+
+</body>
+
+</html>
